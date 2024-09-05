@@ -1,0 +1,162 @@
+/* General App Styling */
+.todo-app {
+    background: linear-gradient(135deg, #f06, #ff8e53);
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+body {
+  background-image: url('images.png');  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Todo Form */
+.todo-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-input {
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 30px;
+    border: none;
+    border-radius: 30px;
+    margin-right: 10px;
+    background: #fff;
+    color: #333;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.todo-input:focus {
+    outline: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+span {
+  background: url("https://cdn4.iconfinder.com/data/icons/general-office/91/General_Office_54-512.png");
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  pointer-events: none;
+  background-size: cover;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: animate 6s linear;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0);
+  }
+  100% {
+    transform: translate(-50%, -5000%);
+    opacity: 0;
+    filter: hue-rotate(720deg);
+  }
+}
+
+.todo-btn {
+    padding: 12px 20px;
+    font-size: 30px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.todo-btn:hover {
+    background-color: #218838;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Todo Item List */
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 16px 20px; /* Increased padding for better spacing */
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 20px; /* Increased font size for todos */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.todo-row:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.todo-row.complete {
+    text-decoration: line-through;
+    opacity: 0.6;
+    background-color: rgba(40, 167, 69, 0.1);
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.delete-icon, .edit-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.delete-icon:hover {
+    color: #dc3545;
+}
+
+.edit-icon:hover {
+    color: #ffc107;
+}
+
+/* Add some responsiveness */
+@media (max-width: 768px) {
+    .todo-app {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .todo-input {
+        font-size: 2rem;
+    }
+
+    .todo-btn {
+        padding: 10px 15px;
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
