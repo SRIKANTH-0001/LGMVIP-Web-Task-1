@@ -7,6 +7,8 @@ DURATION🕓:4 Weeks
                                     
                                     To-Do List Project Overview
 Usage:
+
+
 1.App.js: Manages the state for the entire to-do list and passes state and functions to child components.
 2.Todo.js: Displays individual to-do items and handles actions like marking a to-do as complete or deleting it.
 3.TodoForm.js: Contains a form to add new to-dos, manages input state, and submits new todos to App.js.
